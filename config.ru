@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require_relative './config/environment'
-Dir.glob(File.join(__dir__, 'app', 'controllers', '*.rb')).each { |file| require file }
+Dir.glob(File.join(__dir__, 'app', 'controllers', '*.rb')).sort.each { |file| require file }
 
 builder = Rack::Builder.new do
   use Rack::MethodOverride
