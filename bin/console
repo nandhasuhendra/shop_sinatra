@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+
+require_relative '../config/environment'
+Dir.glob(File.join(__dir__, 'app', '**', '*.rb')).each { |file| require file }
+
+if __FILE__ == $0
+  Pry.start
+end
