@@ -32,7 +32,7 @@ builder = Rack::Builder.new do
     end
 
     def authenticate!
-      access_granted = request.env['HTTP_ACCESS_TOKEN'] == 'youhavenoprivacyandnosecrets'
+      access_granted = request.env['HTTP_ACCESS_TOKEN'] == ENV['API_KEY']
 
       access_granted ? success!(access_granted) : fail!('Could not log in')
     end

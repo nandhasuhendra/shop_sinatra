@@ -12,3 +12,6 @@ require 'sinatra/json'
 require 'slim'
 require 'warden'
 require 'rack/protection'
+
+require 'dotenv'
+Dotenv.load

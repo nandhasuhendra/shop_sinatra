@@ -10,6 +10,7 @@ gem 'warden', '~> 1.2.9'
 gem 'puma', '~> 4.3.7'
 
 group :test, :development do
+  gem 'dotenv'
   gem 'pry'
   gem 'rubocop'
   gem 'rubocop-performance'
