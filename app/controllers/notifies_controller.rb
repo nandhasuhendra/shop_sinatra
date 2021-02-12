@@ -5,8 +5,11 @@ class NotifiesController < Sinatra::Base # :nodoc:
     content_type :json
   end
 
-  get '/' do
+  post '/' do
     env['warden'].authenticate!(:access_token)
-    json(message: 'Notifies Controller')
+
+    puts request.body.read
+
+    status 200
   end
 end

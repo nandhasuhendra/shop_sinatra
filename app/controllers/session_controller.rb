@@ -6,6 +6,7 @@ class SessionController < Sinatra::Base # :nodoc:
   end
 
   post '/unauthenticated' do
+    status 401
     content_type :json
     json(message: 'Sorry, this request can not be authenticated. Try again.')
   end
